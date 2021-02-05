@@ -1,0 +1,27 @@
+<!-- Definición del menú -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <button aria-label="Mostrar u ocultar menú" class="navbar-toggler" id="botonMenu" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <div class="navbar-nav navbar-brand">
+            <a class="nav-item nav-link" href="/">Inicio</a>
+            <a class="nav-item nav-link" href="/productos">Visualizar Productos</a>
+            <a class="nav-item nav-link" href="/productos/agregar">Agregar Productos</a>
+        </div>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    // Tomado de https://github.com/parzibyte/cotizaciones_web/blob/master/js/cotizaciones.js#L2
+    document.addEventListener("DOMContentLoaded", () => {
+        const menu = document.querySelector("#menu"),
+            botonMenu = document.querySelector("#botonMenu");
+        if (menu) {
+            botonMenu.addEventListener("click", () => menu.classList.toggle("show"));
+        }
+    });
+</script>
+<!-- Termina la definición del menú -->
+<main role="main" class="container">
+    <div class="row">
